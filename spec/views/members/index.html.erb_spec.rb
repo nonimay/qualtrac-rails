@@ -11,7 +11,7 @@ RSpec.describe "members/index", :type => :view do
       Member.create!(
         :first_name => "First Name",
         :last_name => "Last Name",
-        :membership_number => 1
+        :membership_number => 2
       )
     ])
   end
@@ -20,6 +20,7 @@ RSpec.describe "members/index", :type => :view do
     render
     assert_select "tr>td", :text => "First Name".to_s, :count => 2
     assert_select "tr>td", :text => "Last Name".to_s, :count => 2
-    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => 1.to_s, :count => 1
+    assert_select "tr>td", :text => 2.to_s, :count => 1
   end
 end
