@@ -39,3 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'rspec-rails'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'shoulda-matchers'
